@@ -20,14 +20,18 @@
     <header>
       <!-- Mobie has hamburger menu that displays the header, desktop is a traditional nav bar
       Has the logo image as well. -->
-      <nav>
+      <nav role="navigation">
         <a href="#"><img src="./assets/images/logo.svg" alt="W logo for the news company."></a>
+        <a id="icon"><img src="./assets/images/icon-menu.svg" alt="Hamburger menu icon"></a>
+        <input type="checkbox" id="menuCheckbox">
         <div class="hamburger-menu">
-          <a href="#">Home</a>
-          <a href="#">New</a>
-          <a href="#">Popular</a>
-          <a href="#">Trending</a>
-          <a href="#">Categories</a>
+          <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -94,5 +98,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="./script/script.js"></script>
 </body>
 </html>
