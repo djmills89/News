@@ -21,7 +21,7 @@
     --very-dark-blue: hsl(240, 100%, 5%);
 
     /* spacing */
-    --section-margin: 3.2rem;
+    --section-margin: 4.8rem;
     --gap-margin: 1.6rem;
 
     /* font family */
@@ -42,6 +42,7 @@ html {
 
 main {
     padding: 1rem;
+    padding-block-start: 3.2rem;
     font-size: var(--fs-paragraph);
 }
 
@@ -86,5 +87,63 @@ section {
         padding-inline: 2rem;
         text-transform: uppercase;
         letter-spacing: 2px;
+        cursor: pointer;
+    }
+}
+
+.new-articles {
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
+    padding: var(--gap-margin);
+
+    h2 {
+        margin-block-end: var(--gap-margin);
+        color: var(--soft-orange);
+    }
+
+    h3 {
+        margin-block-end: var(--gap-margin);
+    }
+
+    p {
+        margin-block-end: var(--gap-margin);
+    }
+
+    hr {
+        margin-block-end: var(--section-margin);
+    }
+}
+
+.suggested-articles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-margin);
+
+    article {
+        display: flex;
+        gap: var(--gap-margin);
+        align-items: flex-start;
+        height: fit-content;
+    }
+}
+
+.image {
+    img {
+        height: 150px;
+    }
+}
+
+.content {
+    h2 {
+        color: var(--soft-red);
+        margin-block-end: var(--gap-margin);
+    }
+    
+    h3 {
+        margin-block-end: var(--gap-margin);
+    }
+
+    p {
+        line-height: 2;
     }
 }
