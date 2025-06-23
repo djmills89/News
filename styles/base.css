@@ -177,6 +177,10 @@ section {
     }
 }
 
+.desktop-image {
+    display: none;
+}
+
 #menu {
     position: fixed;
     top: 0;
