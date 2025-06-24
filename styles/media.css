@@ -1,85 +1,44 @@
-@media (min-width: 768px) {
-    html, body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
+@media (min-width: 786px) {
     main {
-        max-width: 1440px;
-        max-height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-block-start: clamp(6.4rem, 10vh, 20rem);
     }
 
-    .grid-container {
-        display: grid;
-        height: 90vh;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 3.2rem;
+    /* Container section */
+    .suggested-articles1 {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem); /* All children scale with this */
     }
 
-    .main-article {
-        grid-column: 1 / span 2;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        img {
-            grid-column: 1 / span 2;
-        }
-
-        h1 {
-            align-self: end;
-        }
+    /* Each article */
+    .suggested-articles article1 {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    gap: 1em;
+    max-height: 12em; /* Everything inside will scale proportionally */
+    overflow: hidden;
     }
 
-    .suggested-articles {
-        flex-direction: row;
-        grid-column: 1 / span 3;
-
-        article {
-            height: 100%;
-            flex: 1;
-            align-items: flex-start;
-        }
+    /* Image */
+    .suggested-articles img1 {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
     }
 
-    .image {
-        img {
-            flex: 2;
-        }
+    /* Text content */
+    .suggested-articles .content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     }
 
-    .content {
-        flex: 1;
-
-         h2, h3 {
-            margin-block-end: clamp(.1rem, 1.5vw, 1.6rem);
-         }
-
-         h2 {
-            font-size: clamp(1.6rem, 1.5vw, 2.5rem);
-         }
-
-         h3 {
-            font-size: clamp(1.4rem, 1.5vw, 2rem);
-         }
-
-         p {
-            font-size: clamp(.6rem, 1.5vw, 1.5rem);
-         }
-    }
-
-    .mobile-image {
-        display: none;
-    }
-
-    .desktop-image {
-        display: block;
+    .suggested-articles h21,
+    .suggested-articles h31,
+    .suggested-articles p1 {
+    margin: 0;
+    font-size: 1em; /* Scales with section font-size */
+    line-height: 1.2;
     }
 }
