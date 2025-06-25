@@ -1,7 +1,40 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    /* primary colors */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    /* neutral colors */
+    --off-white: hsl(36, 100%, 99%);
+    --grey-blue: hsl(233, 8%, 79%);
+    --dark-grey-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+    /* spacing */
+    --section-margin: 4.8rem;
+    --gap-margin: 1.6rem;
+
+    /* font family */
+    --ff-inter: 'Inter';
+
+    /* font size */
+    --fs-paragraph: 1.5rem;
+
+    /* font weight */
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-heavy: 800;
+    font-size: 62.5%;
 }
 
 body {
@@ -9,19 +42,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: var(--ff-inter);
+    
 }
 
 main {
     padding: clamp(.1rem, 6vw, 8rem);
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1140px;
 }
 
 header {
     display: flex;
     flex-direction: row-reverse;
-    margin-block-end: 2rem;
-    font-size: clamp(13px, 1.5vw, 15px);
+    margin-block-end: 3.2rem;
+    font-size: clamp(1.3rem, 1.5vw, 1.5rem);
 
     img {
         margin-right: auto;
@@ -32,7 +67,7 @@ header {
     }
     ul {
         display: flex;
-        gap: 1rem;
+        gap: 2.8rem;
         list-style-type: none;
     }
 }
@@ -40,8 +75,8 @@ header {
 .main-news-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-block-end: 2rem;
+    gap: 1.6rem;
+    margin-block-end: 3.2rem;
 }
 
 .main-article {
@@ -49,9 +84,9 @@ header {
     grid-column: 1 / span 2;
     grid-row: span 2;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.6rem;
     img {
-        width: 100%;
+        max-width: 100%;
         grid-column: 1 / span 2;
     }
     .title {
@@ -59,16 +94,18 @@ header {
     }
     h1 {
         align-self: end;
-        font-size: 38px;
+        font-size: 3.8rem;
     }
     .main-article-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        line-height: 1.6;
         button {
             border: none;
-            padding: .5rem;
-            background-color: orangered;
+            padding: .75rem;
+            background-color: var(--soft-red);
             width: 50%;
             letter-spacing: 2px;
         }
@@ -76,17 +113,31 @@ header {
 }
 
 .new-articles {
-    background-color: blue;
+    background-color: var(--very-dark-blue);
     color: white;
     grid-row: span 2;
-    padding: 1rem;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        color: var(--soft-orange);
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
 }
 
 .suggested-articles {
     margin: 0 auto;
     height: 50%;
     display: flex;
-    gap: 1rem;
+    gap: 1.6rem;
 
     article {
         width: 100%;
@@ -115,27 +166,37 @@ header {
         object-fit: cover;
     }
 
-    div:last-of-type {
+    .content {
         max-width: 100%;
         max-height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 0.5rem;
         box-sizing: border-box;
         h2, h3, p {
             margin: 0;
         }
         h2 {
-            font-size: clamp(11px, 1.5vw, 21px);
+            font-size: clamp(1.8rem, 1.5vw, 2.1rem);
+            color: var(--soft-red);
         }
         h3 {
-            font-size: clamp(8px, 1.5vw, 18px);
+            font-size: clamp(1.2rem, 1.5vw, 1.8rem);
         }
         p{
             justify-self: flex-end;
-            font-size: clamp(5px, 1.5vw, 15px);
+            font-size: clamp(.5rem, 1.5vw, 1.5rem);
         }
     }
 }
 
+.mobile-img {
+    display: none;
+}
+.desktop-img {
+    display: block;
+}
+#menuCheckbox {
+    display: none;
+}

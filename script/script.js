@@ -1,7 +1,7 @@
 const menu = document.getElementById('icon')
 const checkbox = document.getElementById('menuCheckbox')
 const menuIcon = menu.querySelector('img')
-let isOpen = false
+let isOpen = checkbox.checked
 
 
 menu.addEventListener('click', (e) => {
