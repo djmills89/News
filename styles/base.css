@@ -72,6 +72,11 @@ header {
     }
 }
 
+li:hover, h3:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+
 .main-news-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -104,10 +109,15 @@ header {
         line-height: 1.6;
         button {
             border: none;
+            cursor: pointer;
             padding: .75rem;
             background-color: var(--soft-red);
             width: 50%;
             letter-spacing: 2px;
+            transition: background-color .5s ease;
+        }
+        button:hover {
+            background-color: color-mix(in srgb, var(--soft-red) 80%, white 20%);
         }
     }
 }
