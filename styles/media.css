@@ -1,6 +1,6 @@
 @media (max-width: 786px) {
     body {height: auto;}
-    main {padding: 1.6rem;}
+    main {padding: var(--space-100);}
     .main-news-container {
         grid-template-columns: 1fr;
     }
@@ -13,8 +13,8 @@
         }
 
         .main-article-content > p {
-            font-size: 1.5rem;
-            margin-block-end: 1.6rem;
+            font-size: var(--fs-paragraph);
+            margin-block-end: var(--space-100);
         }
 
         .main-article-content > button {
@@ -31,11 +31,11 @@
         
         h3 {
             font-size: 1.8rem;
-            margin-block-start: 1.6rem;
+            margin-block-start: var(--space-100);
         }
         p {
-            font-size: 1.5rem;
-            margin-block: 1.6rem;
+            font-size: var(--fs-paragraph);
+            margin-block: var(--space-100);
         }
     }
 
@@ -47,11 +47,11 @@
             justify-content: space-evenly;
         }
         .content > p {
-            font-size: 1.5rem;
+            font-size: var(--fs-paragraph);
         }
 
         .content > h2 {
-            font-size: 3.2rem;
+            font-size: var(--space-200);
         }
 
         .content > h3 {

@@ -35,6 +35,10 @@
     --fw-bold: 700;
     --fw-heavy: 800;
     font-size: 62.5%;
+
+    /* spacing */
+    --space-100 : 1.6rem;
+    --space-200: 3.2rem;
 }
 
 body {
@@ -55,7 +59,7 @@ main {
 header {
     display: flex;
     flex-direction: row-reverse;
-    margin-block-end: 3.2rem;
+    margin-block-end: var(--space-200);
     font-size: clamp(1.3rem, 1.5vw, 1.5rem);
 
     img {
@@ -80,8 +84,8 @@ li:hover, h3:hover {
 .main-news-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
-    margin-block-end: 3.2rem;
+    gap: var(--space-100);
+    margin-block-end: var(--space-200);
 }
 
 .main-article {
@@ -89,7 +93,7 @@ li:hover, h3:hover {
     grid-column: 1 / span 2;
     grid-row: span 2;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.6rem;
+    gap: var(--space-100);
     img {
         max-width: 100%;
         grid-column: 1 / span 2;
@@ -126,7 +130,7 @@ li:hover, h3:hover {
     background-color: var(--very-dark-blue);
     color: white;
     grid-row: span 2;
-    padding: 1.6rem;
+    padding: var(--space-100);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,7 +140,7 @@ li:hover, h3:hover {
         font-size: 3rem;
     }
     h3 {
-        font-size: 1.5rem;
+        font-size: var(--fs-paragraph);
     }
     p {
         font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -147,7 +151,7 @@ li:hover, h3:hover {
     margin: 0 auto;
     height: 50%;
     display: flex;
-    gap: 1.6rem;
+    gap: var(--space-100);
 
     article {
         width: 100%;
