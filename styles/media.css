@@ -111,7 +111,7 @@
     }
 
     #menuCheckbox:checked + .hamburger-menu #menu {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 
     #icon {
